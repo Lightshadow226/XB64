@@ -1,0 +1,26 @@
+.xbCircle {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	width: 75px;
+	height: 75px;
+	border : 1px solid black;
+	border-radius: 75px;
+}
+
+.xbSeparator {
+	margin-bottom: 50px;
+}
+
+.xbCirclePlacement {
+	height: 70%;
+	margin: auto;
+	overflow: auto;
+	 position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.xbMenu {
+	display: inline-block;
+	vertical-align: middle;
+}

@@ -1,3 +1,18 @@
+body {
+	margin: 0;
+}
+
+.xbBar {
+	margin : 0;
+	height: 50px;
+	background-color: #27B61F;
+}
+
+.xbTitle {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
 .xbCircle {
 	display: inline-block;
 	vertical-align: middle;
@@ -6,6 +21,19 @@
 	height: 75px;
 	border : 1px solid black;
 	border-radius: 75px;
+}
+
+.xbSubCircle {
+	width: 50px;
+	height: 50px;
+	border : 1px solid black;
+	border-radius: 75px;
+	margin: auto;
+	margin-top: 12px;
+}
+
+.xbPointer {
+	width: 200px;
 }
 
 .xbSeparator {
@@ -23,4 +51,12 @@
 .xbMenu {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.xbSignIn {
+	position: absolute;
+	right: 50px;
+	heigh: 50px;
+	width: 70px
+	background-color: #
 }

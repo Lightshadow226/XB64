@@ -4,6 +4,34 @@
 	<head>
 		<link rel="stylesheet" href="xb64.css" />
 		<meta charset="utf-8">
+
+		<script type="text/javascript">
+			function openSignIn(obj, signIn) {
+				var obj = document.getElementById(obj)
+				var xy = signIn.getBoundingClientRect()
+
+				if(obj.style.display == "inline") {
+					obj.style.display = "none"
+				} else {
+					obj.style.top = (xy.top + signIn.offsetHeight + 10) + "px"
+					obj.style.left = (xy.right - signIn.offsetWidth/2 - 80) + "px"
+					obj.style.display = "inline"
+				}
+			}
+
+			function openResearch(obj, research) {
+				var obj = document.getElementById(obj)
+				var xy = research.getBoundingClientRect()
+
+				if(obj.style.display == "inline") {
+					obj.style.display = "none"
+				} else {
+					obj.style.top = (xy.top + 10) + "px"
+					obj.style.left = (xy.right + 10) + "px"
+					obj.style.display = "inline"
+				}
+			}			
+		</script>
 	</head>
 
 	<body>
@@ -21,11 +49,11 @@
 					</div>
 				</td>
 				<td>
-					<div class="xbSignIn" onmouseover="this.style.cursor='pointer'">
+					<div class="xbBtnSignIn" onmouseover="this.style.cursor='pointer'" onclick="openSignIn('xbSignIn', this)">
+						<div class="xbMenu"> Connexion </div>
 						<div class="xbCircle">
 							<div class="xbSubCircle"></div>
 						</div>
-						<div class="xbMenu"> Connexion </div>
 					</div>
 				</td>
 				<td class="xbSeparator"> </td>
@@ -47,14 +75,14 @@
 						<div class="xbCircle">
 							<div class="xbSubCircle"></div>
 						</div>
-						<div class="xbMenu"> Vendeur </div>
+						<div class="xbMenu"> Aléatoire </div>
 					</div>
 				</td>
 				<td class="xbSeparator"> </td>
 			</tr>
 			<tr>
 				<td>
-					<div class="xbPointer" onmouseover="this.style.cursor='pointer'">
+					<div class="xbPointer" onmouseover="this.style.cursor='pointer'" onclick="openResearch('xbResearch', this)">
 						<div class="xbCircle">
 							<div class="xbSubCircle"></div>
 						</div>
@@ -64,5 +92,18 @@
 				<td class="xbSeparator"> </td>
 			</tr>
 		</table>
+
+		<section class="xbSignIn" id="xbSignIn">
+			<p><label>Nom d'utilisateur : </label> <input type="text"/></p>
+			<p><label>Mot de passe : </label> <input type="password"/></p>
+		</section>
+
+		<section class="xbResearch" id="xbResearch">
+			<table>
+				<tr> <td> objet </td> </tr>
+				<tr> <td> Utilisateur </td> </tr>
+				<tr> <td> Commentaire </td> </tr>
+			</table>
+		</section>
 	</body>
 </html>
